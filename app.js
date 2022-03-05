@@ -16,7 +16,6 @@ const fetchPokemon =()=> {
     .then(pokemons => {
         return pokemons.reduce((accumulator, {types,name,id,stats}) => {
             const type = types.map(typeInfo => typeInfo.type.name)
-            console.log(type);
             accumulator += 
             `<li class="card ${type[0]} ">
                 <h1 class="title">#${id}</h1>
@@ -84,11 +83,6 @@ function modalClick(event) {
              </div>
              <div class="status"><ul>${status}</ul</div>
          </div>`.replace(/,/g, '')
-            // .replace('attack', 'atk')
-            // .replace('defense', 'def')
-            // .replace('special-attack', 'atk-esp')
-            // .replace('special-defense', 'def-esp')
-            // .replace('speed', 'vel')
              return accumulator
             
         },'')
@@ -106,12 +100,12 @@ function modalClick(event) {
 
 
 
-/*Criacao do inpu de pesquisa, podendo ser pesquisado id, nome e classe pokemon */
+/*Criacao do input de pesquisa, podendo ser pesquisado id, nome e classe pokemon */
 const inputPokemon = document.querySelector('input')
 
-function handleInput(event) { 
+function handleInput({target}) { 
 ul.innerHTML= ''
-if(event.target.value == '') {
+if(target.value == '') {
     fetchPokemon()
 }else {
 Promise.all(pokemonPromises)
