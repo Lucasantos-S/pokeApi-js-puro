@@ -341,83 +341,36 @@ align-content: center;
 	justify-content: center;
 	align-items: center;
 }
-.hp::before {
+/*before modal refatorado*/
+.hp::before,.attack::before,.defense::before,.special-attack::before,.special-defense::before,.speed::before {
 content: ' ';
 width: 45px;
 height: 5px;
 position: absolute;
 display: block;
-background: red;
 left: 170px;
 align-items: center;
 border-radius: 3px;
 -webkit-animation: scale-up-hor-left 0.8s linear forwards;
 animation: scale-up-hor-left 0.8s linear forwards;
+}
+.hp::before {
+background: red;
 }
 .attack::before {
-content: ' ';
-width: 49px;
-height: 5px;
-position: absolute;
-display: block;
 background: rgb(255, 208, 0);
-left: 170px;
-align-items: center;
-border-radius: 3px;
--webkit-animation: scale-up-hor-left 0.8s linear forwards;
-animation: scale-up-hor-left 0.8s linear forwards;
 }
 .defense::before {
-content: ' ';
-width: 49px;
-height: 5px;
-position: absolute;
-display: block;
 background: rgb(0, 4, 255);
-left: 170px;
-align-items: center;
-border-radius: 3px;
--webkit-animation: scale-up-hor-left 0.8s linear forwards;
-animation: scale-up-hor-left 0.8s linear forwards;
 }
 .special-attack::before {
-content: ' ';
-width: 49px;
-height: 5px;
-position: absolute;
-display: block;
 background: rgb(112, 112, 109);
-left: 170px;
-align-items: center;
-border-radius: 3px;
--webkit-animation: scale-up-hor-left 0.8s linear forwards;
-animation: scale-up-hor-left 0.8s linear forwards;
 }
 .special-defense::before {
-content: ' ';
-width: 49px;
-height: 5px;
-position: absolute;
-display: block;
 background: rgb(0, 183, 255);
-left: 170px;
-align-items: center;
-border-radius: 3px;
--webkit-animation: scale-up-hor-left 0.8s linear forwards;
-animation: scale-up-hor-left 0.8s linear forwards;
 }
 .speed::before {
-content: ' ';
-width: 49px;
-height: 5px;
-position: absolute;
-display: block;
 background: rgb(36, 165, 159);
-left: 170px;
-align-items: center;
-border-radius: 3px;
--webkit-animation: scale-up-hor-left 0.8s linear forwards;
-animation: scale-up-hor-left 0.8s linear forwards;
 }
 
 @-webkit-keyframes scale-up-hor-left {
