@@ -9,6 +9,7 @@
     </p>
 </ul>
 
+https://lucasantos-s.github.io/pokeApi-js-puro/
 
 # Navegation
 <P>
